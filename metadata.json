@@ -1,0 +1,5 @@
+{
+  "name": "Sign VSL: Learning Vietnamese Sign Language",
+  "description": "A showcase website for an AI-powered application designed to help deaf children learn the Vietnamese alphabet and numbers through real-time hand gesture recognition using MediaPipe.",
+  "requestFramePermissions": []
+}
