@@ -1,13 +1,13 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Introduction from './components/Introduction';
-import Features from './components/Features';
-import Technology from './components/Technology';
-import Team from './components/Team';
-import Roadmap from './components/Roadmap';
-import Footer from './components/Footer';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import Introduction from './components/Introduction.tsx';
+import Features from './components/Features.tsx';
+import Technology from './components/Technology.tsx';
+import Team from './components/Team.tsx';
+import Roadmap from './components/Roadmap.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
