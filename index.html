@@ -2,7 +2,13 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <!--
+      The <base> tag is critical for GitHub Pages deployment in a subdirectory.
+      It tells the browser that all relative paths for scripts, images, and modules
+      should start from '/webtest/'. This fixes the 404 errors when trying to load
+      .tsx files like App.tsx.
+    -->
+    <base href="/webtest/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign VSL: Học Ngôn Ngữ Ký Hiệu</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +26,9 @@
         },
       }
     </script>
-    <!-- Use a reliable ES Module CDN and explicitly map react-dom/client -->
+    <!-- 
+      Simplified the importmap to only include the essential modules from a reliable CDN.
+    -->
     <script type="importmap">
 {
   "imports": {
@@ -36,7 +44,11 @@
   </head>
   <body class="bg-gray-50 text-gray-800">
     <div id="root"></div>
-    <!-- Tell Babel to transpile this script using react and typescript presets -->
+    <!-- 
+      This script tag tells the browser to use Babel to transpile './index.tsx' before executing it.
+      The presets 'react' and 'typescript' are necessary for TSX syntax.
+      'data-type="module"' ensures it's treated as an ES module, allowing 'import' statements.
+    -->
     <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
